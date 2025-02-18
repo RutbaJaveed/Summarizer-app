@@ -1,3 +1,4 @@
+# Import necessary libraries
 import streamlit as st  
 import pymupdf   #For pdf
 from docx import Document  # For docx
@@ -6,12 +7,13 @@ from dotenv import load_dotenv
 import os
 import google.generativeai as genai
 
-
+# Load environment variables
 load_dotenv()
 
+# Retrieve the Google API key from environment variables
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-
+# Configure the generative AI model with the API key
 genai.configure(api_key=GOOGLE_API_KEY)
 
 
@@ -41,6 +43,7 @@ def extract_pdf_content(uploaded_file):
 
         content_stream = ""
 
+        # Loop through all pages and extract text
         for page_num in range(len(pdf_doc)):
             page = pdf_doc[page_num]
             content_stream += page.get_text()
@@ -87,7 +90,8 @@ def extract_txt_content(uploaded_file):
         return None
 
 
-#Streamlit App
+#Set up the Streamlit App
+
 st.set_page_config(page_title="Multi-doc Summarizer", page_icon="📄",layout="wide")
 st.markdown(
     """
