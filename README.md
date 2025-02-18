@@ -1,10 +1,10 @@
-## Multi-doc Summarizer app
+# Multi-doc Summarizer app
 
-# Overview
+## Overview
 
 Multi-doc Summarizer is a Streamlit-based web application that allows users to upload documents in various formats (PDF, DOCX, PPTX, TXT) and generate concise summaries using Google's Gemini API.
 
-# Features
+## Features
 
 Supports multiple document formats: PDF, DOCX, PPTX, and TXT.
 
@@ -31,35 +31,6 @@ python-pptx: Extract text from PPTX files.
 Google Generative AI (Gemini): For text summarization.
 
 dotenv: Load API keys securely.
-
-## Installation
-
-# Prerequisites
-
-Ensure you have Python installed on your system.
-
-# Steps
-
-Clone the repository:
-
-git clone https://github.com/your-repo/multi-doc-summarizer.git
-cd multi-doc-summarizer
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Set up your API key:
-
-Create a .env file in the root directory.
-
-Add your Google API key:
-
-GOOGLE_API_KEY=your_api_key_here
-
-Run the application:
-
-streamlit run app.py
 
 # Usage
 
